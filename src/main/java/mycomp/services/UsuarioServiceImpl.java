@@ -34,7 +34,7 @@ public class UsuarioServiceImpl implements UsuarioServiceI {
 		throw new UsuarioExistException("El usuario ya existe");
 	 }
 
-	 /* ::Procesa los roles usando Streams:: */
+	 /* ::procesar los roles usando Streams:: */
 	 List<RolModel> rolesAsignados = usu.getLstRoles().stream().map(rol ->
 	 // intentar encontrar el rol existente por nombre
 	 this.rolrepo.findByNombreRol(rol.getNombreRol())

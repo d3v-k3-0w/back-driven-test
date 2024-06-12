@@ -59,9 +59,9 @@ public class AppController {
 		long count = this.ususrvc.countUsuarios(); // contar el num de usuarios registrados
 
 		/*
-		 * ::si count==0, el primer usuario registrado es ADMIN y los demas son NORMAL::
+		 * ::si count==0, el primer usuario registrado es ADMIN y los demas son USER::
 		 */
-		List<String> lstRoleNames = count == 0 ? List.of("ADMIN") : List.of("NORMAL");
+		List<String> lstRoleNames = count == 0 ? List.of("ADMIN") : List.of("USER");
 
 		/* ::convertir nombres de roles a objetos RolModel:: */
 		List<RolModel> roles = lstRoleNames.stream().map(roleName -> {
