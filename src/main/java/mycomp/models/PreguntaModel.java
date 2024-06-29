@@ -18,7 +18,9 @@ public class PreguntaModel implements Serializable {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long idPregunta;
 
-  @Column(length = 5000)
+  
+  @Lob
+  @Column(name = "contenido", columnDefinition = "TEXT", nullable = false)
   private String contenido;
   private String imagen;
   private String opcion1;

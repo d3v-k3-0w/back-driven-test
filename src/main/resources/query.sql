@@ -67,16 +67,16 @@ INSERT INTO usuarios_roles (idUsuario, idRol) VALUES (1, 1); -- John Wick tiene 
 INSERT INTO usuarios_roles (idUsuario, idRol) VALUES (2, 2); -- Mary Jane tiene rol USER
 
 INSERT INTO categoria (titulo, descripcion) VALUES 
-('Java', 'Exámenes relacionados con el lenguaje de programación Java'),
-('JavaScript', 'Exámenes relacionados con el lenguaje de programación JavaScript');
+('Java', 'Exámenes del lenguaje de programación Java'),
+('JavaScript', 'Exámenes del lenguaje de programación JavaScript');
 
 INSERT INTO examen (titulo, descripcion, puntosMax, numPreguntas, isActivo, idCategoria) VALUES 
-('Examen de Java Básico', 'Examen para evaluar conocimientos básicos de Java', '100', '3', TRUE, 1),
-('Examen de JavaScript Básico', 'Examen para evaluar conocimientos básicos de JavaScript', '100', '3', TRUE, 2);
+('Java Básico', 'Evaluar conocimientos básicos de Java', '100', '4', TRUE, 1),
+('JavaScript Básico', 'Evaluar conocimientos básicos de JavaScript', '100', '4', TRUE, 2);
 
 INSERT INTO pregunta (contenido, imagen, opcion1, opcion2, opcion3, opcion4, respuesta, idExamen) VALUES 
 -- Preguntas para el examen de Java
-('¿Qué es un objeto en Java?', NULL, 'Una instancia de una clase', 'Una clase', 'Un método', 'Un paquete', 'Una instancia de una clase', 1),
+('¿Qué es un objeto en Java?', NULL, 'una instancia de una clase', 'una clase', 'un método', 'un paquete', 'una instancia de una clase', 1),
 ('¿Cuál es el modificador de acceso más restrictivo en Java?', NULL, 'public', 'protected', 'private', 'default', 'private', 1),
 ('¿Qué palabra clave se utiliza para heredar una clase en Java?', NULL, 'extends', 'implements', 'inherits', 'super', 'extends', 1),
 ('¿Qué es un JRE en Java?', NULL, 'un entorno de ejecución para aplicaciones Java', 
